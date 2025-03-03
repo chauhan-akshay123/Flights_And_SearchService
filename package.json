@@ -10,6 +10,7 @@
   "author": "Akshay Chauhan",
   "license": "ISC",
   "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.45",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
