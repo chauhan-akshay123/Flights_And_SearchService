@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const { PORT } = require("./config/serverConfig");
 const ApiRoutes = require("./routes/index"); 
 
+const {Airplane} = require("./models/index");
+
 const db = require("./models/index");
 
 const setupAndStartServer = async () => {
@@ -24,7 +26,10 @@ const setupAndStartServer = async () => {
         if(process.env.SYNC_DB){
             db.sequelize.sync({alter: true}) 
         }   
-     
+        await Airplane.create({
+              modelNumber: ' Embraer 175',
+              capacity: 88
+        });
     });
 }
 
